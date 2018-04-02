@@ -1,0 +1,26 @@
+{
+  "name": "applicant_stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antablack/applicant_stack.git"
+  },
+  "author": "antablack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antablack/applicant_stack/issues"
+  },
+  "homepage": "https://github.com/antablack/applicant_stack#readme"
+}
