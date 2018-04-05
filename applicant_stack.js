@@ -4,9 +4,10 @@ const KEYSECRET = "fhqiieqy1dq8h0fe";
 const https = require("https");
 function receiveNotification(req, res) {
     console.log("---------------------------------------")
-    console.log(req.headers);
+    console.log(req);
     console.log(req.body);
-
+    console.log(req.params);
+    console.log(req.query);
     var idCandidate = "a4r6kxcdwmrc";
     let URLCandidate = `/api/candidate/${req.body["Candidate Serial"]}`;
     let URLCandidates = `/api/candidates`;
