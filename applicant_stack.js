@@ -4,7 +4,6 @@ const KEYSECRET = "fhqiieqy1dq8h0fe";
 const https = require("https");
 function receiveNotification(req, res) {
     console.log("---------------------------------------")
-    console.log(req);
     console.log(req.body);
     console.log(req.params);
     console.log(req.query);

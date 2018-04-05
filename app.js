@@ -11,6 +11,7 @@ var urlencodedparser = bodyParser.urlencoded({extended: false});
 
 app.listen(3500, function () {
     console.log("runnig aplication in port: " + 3500);
+    app.use(jsonParser);
     app.use(urlencodedparser);
     app.get("/applicant_stack",(req, res, next)=>{
         console.log("GET /applicant_stack");
