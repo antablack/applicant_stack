@@ -17,7 +17,7 @@ function receiveNotification(req, res) {
      'Hire Serial': 'e2r6kxcwf77v',
      'User Serial': '',
      'User Type': 'SYSTEM' } */
-    if (req.body && req.body["Object Type"]==="hire") {
+    if (req.body && req.body["Object Type"] === "hire") {
         console.log("---------------------------------------")
         console.log("Getting user")
         var idHire = req.body["Hire Serial"];
@@ -39,6 +39,39 @@ function receiveNotification(req, res) {
             });
             res.on("end", (a) => {
                 console.log(body);
+                /*
+                example response
+                                {
+                "Method Result":"Success",
+                "Hire Serial":"e2r6kxc4lk2x",
+                "Candidate Serial":"a4r6kxcam3h1",
+                "First Name":"George M.",
+                "Last Name":"Blake",
+                "Email":"george.blake@applicantstack.com",
+                "Address 1":"4751 Fergusen Dr. (Sample)",
+                "Address 2":"",
+                "City":"Raleigh",
+                "State":"NC",
+                "Zip":"27616",
+                "Phone":"919-871-7487",
+                "Start Date":"",
+                "Job Name":"Accounting Manager (Sample)",
+                "Department":"Finance",
+                "Job Category":"1B Middle Management",
+                "Job Type":"Exempt (salaried)",
+                "Pay Rate":"",
+                "Location":"Atlanta, GA",
+                "Stage":"New",
+                "Manager":"Errolan Zambrano Carranza",
+                "Create Date":"04\/05\/2018 01:41 PM",
+                "Last Modified Date":"04\/05\/2018 01:41 PM",
+                "Questionnaires":[
+                ],
+                "Forms":[
+                    
+                ]
+                }
+                */
             });
         })
     }
