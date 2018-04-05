@@ -1,5 +1,5 @@
 const TOKEN = "2uyau0e0y8i97f832e0m74d6lv003ovgkrv0imvx";
-const URL = "https://https://tinphongsu.applicantstack.com";
+const URLAPI = "tinphongsu.applicantstack.com";
 const KEYSECRET = "fhqiieqy1dq8h0fe";
 const https = require("https");
 function receiveNotification(req, res) {
@@ -17,12 +17,14 @@ function receiveNotification(req, res) {
      'Hire Serial': 'e2r6kxcwf77v',
      'User Serial': '',
      'User Type': 'SYSTEM' } */
-    if (req.body && req.body["Object Type"]=="hire") {
+    if (req.body && req.body["Object Type"]==="hire") {
+        console.log("---------------------------------------")
+        console.log("Getting user")
         var idHire = req.body["Hire Serial"];
-        let URLCandidate = `${URL}/o/api/hire/${idHire}`;
+        let URLCandidate = `/o/api/hire/${idHire}`;
         //let URLCandidates = `/api/candidates`;
         let options = {
-            host: "tinphongsu.applicantstack.com",
+            host: URLAPI,
             path: URLCandidate,
             headers: {
                 "Token": TOKEN
