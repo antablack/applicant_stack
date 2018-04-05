@@ -5,8 +5,22 @@ const https = require("https");
 function receiveNotification(req, res) {
     console.log("---------------------------------------")
     console.log(req.body);
-    console.log(req.params);
-    console.log(req.query);
+  
+
+   /*  
+   
+   format final request
+   { 'Object Type': 'hire',
+    'Event Type': 'stagechange',
+    Domain: 'tinphongsu',
+    Secret: 'fhqiieqy1dq8h0fe',
+    'Event Date': '2018-04-05T13:03:46-04:00',
+    Stage: 'New',
+    'Hire Serial': 'e2r6kxcwf77v',
+    'User Serial': '',
+    'User Type': 'SYSTEM' } */
+
+
     var idCandidate = "a4r6kxcdwmrc";
     let URLCandidate = `/api/candidate/${req.body["Candidate Serial"]}`;
     let URLCandidates = `/api/candidates`;
