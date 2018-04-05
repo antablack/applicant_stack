@@ -26,7 +26,7 @@ function receiveNotification(req, res) {
             body += data;
         });
         res.on("end", (a) => {
-            console.log(body);
+            //console.log(body);
         });
     })
     res.sendStatus(200);
